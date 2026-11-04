@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  width: fit-content;
+  height: 300px;
+  border-radius: 12px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  width: 90%;
+  height: 95%;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: rgb(226, 220, 220);
+}
+
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+
+.leg {
+  width: 2%;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.9);
+}

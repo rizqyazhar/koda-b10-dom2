@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Light</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="head">
+      <div class="inner">
+        <div id="red" class="circle"></div>
+        <div id="yellow" class="circle"></div>
+        <div id="green" class="circle"></div>
+      </div>
+    </div>
+    <div class="leg"></div>
+
+    <script>
+      const redCirc = document.getElementById("red");
+      const yellowCirc = document.getElementById("yellow");
+      const greenCirc = document.getElementById("green");
+
+      function loop() {
+        redCirc.classList.add("red");
+        window.setTimeout(() => {
+          redCirc.classList.remove("red");
+          yellowCirc.classList.add("yellow");
+          window.setTimeout(() => {
+            yellowCirc.classList.remove("yellow");
+            greenCirc.classList.add("green");
+            window.setTimeout(() => {
+              greenCirc.classList.remove("green");
+              redCirc.classList.add("red");
+              loop();
+            }, 3000);
+          }, 2000);
+        }, 3000);
+      }
+
+      loop();
+    </script>
+  </body>
+</html>
